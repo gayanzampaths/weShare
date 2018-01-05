@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!---Logo-->
+    <ion-thumbnail>
+      <img src="assets/logo.png">
+    </ion-thumbnail>
+    <!---Input field username-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>
+    </ion-item>
+    <!---Input field email-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>E-Mail</ion-label>
+      <ion-input type="email" [(ngModel)]="email" required="required"></ion-input>
+    </ion-item>
+    <!---Input field password-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" required="required"></ion-input>
+    </ion-item>
+    <!---Input field country-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>Country</ion-label>
+      <ion-input type="text" [(ngModel)]="country" required="required"></ion-input>
+    </ion-item>
+    <!---Input field mobile-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>Mobile Number</ion-label>
+      <ion-input type="text" [(ngModel)]="mobile" required="required"></ion-input>
+    </ion-item>
+  </ion-list>
+  <br>
+  <br>
+  <div text-center>
+    <!---Register button hide-->
+    <button *ngIf="(!email && !password) || (!email && password) || (email && !password)" ion-button color=secondary clear round>REGISTER NOW</button>
+    <!--register button active-->
+    <button *ngIf="(email && password)" ion-button color=secondary round (click)="submitregister()">REGISTER</button>
+  </div>
+</ion-content>

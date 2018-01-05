@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!---Logo-->
+    <ion-thumbnail>
+      <img src="assets/logo.png">
+    </ion-thumbnail>
+    <!---Input field username-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>E-Mail</ion-label>
+      <ion-input type="email" [(ngModel)]="email" required="required"></ion-input>
+    </ion-item>
+    <!---Input field password-->
+    <ion-item no-padding style="background-color:transparent">
+      <ion-label color="secondary" floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" required="required"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <div text-center>
+      <!---Login button ready-->
+      <button *ngIf="email && password" ion-button color=secondary round (click)="submitlogin()">LOGIN</button>
+      <!---Login button default-->
+      <button *ngIf="(!email && !password) || (email && !password) || (!email && password)" ion-button color=secondary clear round>LOGIN NOW</button>
+    </div>
+    <div text-center>
+      <!--forgot password-->
+      <button ion-button color=secondary block clear (click)="forgotpassword()">Forgot Password ?</button>
+    </div>
+    <div text-center>
+      <!---Register button-->
+      <button ion-button block clear color=secondary (click)="redirectregister()">REGISTER</button>
+    </div>
+    <div>
+      <!---Facebook button-->
+      <button ion-button color="facebook" style="width: 100%" (click)="fblogin()"><ion-icon name="logo-facebook"></ion-icon> Sign In with Facebook</button>
+      <!---Google button-->
+      <button ion-button color="google"  style="width: 100%" (click)="fblogin()"><ion-icon name="logo-google"></ion-icon> Sign In with Google</button>
+    </div>
+  </ion-list>
+</ion-content>

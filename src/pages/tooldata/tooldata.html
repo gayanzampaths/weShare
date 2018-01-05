@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tool Data</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item no-padding style="background-color:transparent" text-center>
+        <h1 style="color: #FCD736;">{{toolName}}</h1>
+        <br>
+        <br>
+        <h1 style="color: #FCD736;">Belongs To :</h1>
+        <br>
+        <h3 style="color: #FCD736;" (click)="goToProfile()">{{name}}</h3>
+        <br>
+        <h1 style="color: #FCD736;">Tool Category</h1>
+        <br>
+        <h3 style="color: #FCD736;">{{cat}}</h3>
+        <br>
+        <br>
+        <h1 style="color: #FCD736;">Tool Selling Price</h1>
+        <br>
+        <h3 style="color: #FCD736;">{{price}}</h3>
+        <br>
+        <br>
+        <h1 style="color: #FCD736;">If Reted Deposit</h1>
+        <br>
+        <h3 style="color: #FCD736;">{{dep}}</h3>
+    </ion-item>
+  
+  <h1 style="color: #FCD736;">Ratings Of the tools</h1>
+  <rating [onlyRead]="false" (ionClick)="log($event)">
+  </rating>
+  <br>
+  <br>
+  <ion-item *ngFor="let c of comm | async">
+      <h3>{{c}}</h3>
+    </ion-item>
+  <h1 style="color: #FCD736;">Enter a Comment about my tool</h1>
+  <ion-item no-padding style="background-color:transparent">
+    <ion-textarea [(ngModel)]="commentadd" style="color: #FCD736;" placeholder="Enter a comment"></ion-textarea>
+  </ion-item>
+  <button ion-button (click)="comment()">Add a comment</button>
+</ion-content>

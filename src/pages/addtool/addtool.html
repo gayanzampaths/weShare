@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a Tool</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 title text-center color=secondary>Enter Tool Details</h1>
+  <br>
+  <!---Input field toolName-->
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary" floating>Enter Tool Name</ion-label>
+    <ion-input type="text" [(ngModel)]="toolName" required="required"></ion-input>
+  </ion-item>
+  <!---Input field toolCategory-->
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary" floating>Tool Category</ion-label>
+    <ion-input type="text" [(ngModel)]="category" required="required"></ion-input>
+  </ion-item>
+  <!---Input field rentalPrice-->
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary" floating>Rental Price</ion-label>
+    <ion-input type="text" [(ngModel)]="price" required="required"></ion-input>
+  </ion-item>
+  <!---Input field deposit Price-->
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary" floating>Deposit Price</ion-label>
+    <ion-input type="text" [(ngModel)]="depPrice" required="required"></ion-input>
+  </ion-item>
+  <button ion-button color=secondary (click)="submitTool()">Save</button>
+  <button ion-button color=secondary (click)="cancel()">Cancel</button>
+</ion-content>

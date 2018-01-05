@@ -1,3 +1,67 @@
 page-home {
-
-}
+    .scroll-content {
+      overflow: visible !important;
+      padding: 0;
+    }
+  
+    .ion-searchbar{
+      padding: 0%;
+    }
+  
+    #map{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top : 10%;
+      padding: 0;
+      margin: 0;
+    }
+  
+    #toolMarker{
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/weshare-4e97e.appspot.com/o/toolMarker.png?alt=media&token=1bccc34a-93eb-4791-b3f0-b9a07a1bc3be");
+      position: absolute;
+      left:46%;
+      top:48%;
+      width:30px;
+      height: 50px;
+      z-index: 9;
+      cursor: pointer;
+    }
+  
+    .navigate{
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      z-index: 9;
+      cursor: pointer;
+    }
+  
+    .default-background {
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/ionic2templates.appspot.com/o/background%2F29.jpg?alt=media&token=236a9ff0-6628-4d3d-966f-bd228a299cc5');
+      height: 100%;
+      width: 100%;
+      display: table;
+  
+      .ionic-descript {
+        display: table-cell;
+        vertical-align: middle;
+  
+        h2[item-title] {
+          margin: 0;
+        }
+  
+        p[item-subtitle] {
+          color: theme-colors('mainColors', 'secondary') !important;
+        }
+      }
+  
+      a {
+        color: theme-colors('textColors', 'accent') !important;
+        text-decoration: underline;
+        visibility: visible !important;
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+      }
+    }
+  }

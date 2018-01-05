@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary">{{name}}</ion-label>
+  </ion-item>
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary">{{country}}</ion-label>
+  </ion-item>
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary">{{mobile}}</ion-label>
+  </ion-item>
+  <ion-item no-padding style="background-color:transparent">
+    <ion-label color="secondary">{{email}}</ion-label>
+  </ion-item>
+
+  <button ion-button (click)="goToHome()">Go To Home</button>
+  <button ion-button (click)="signOut()">Sign Out</button>
+</ion-content>
